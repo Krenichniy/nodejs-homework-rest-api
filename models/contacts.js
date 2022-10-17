@@ -1,5 +1,6 @@
 const fs = require('fs/promises');
 const path = require('path');
+const Contact = require('./contact')
 const { nanoid } = require('nanoid');
 const contactsPath = path.join(__dirname, 'contacts.json');
 
