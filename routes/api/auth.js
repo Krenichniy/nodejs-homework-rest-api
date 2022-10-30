@@ -9,7 +9,7 @@ router.post('/register', validateBody(schemas.registerShema), ctrlWrapper(ctrl.r
 router.post('/login', validateBody(schemas.loginShema), ctrlWrapper(ctrl.login) );
 router.get('/current', authenticate, ctrlWrapper(ctrl.getCurrent));
 router.get('/logout', authenticate, ctrlWrapper(ctrl.logout));
-// router.patch('/users/subscription', authenticatem, ctrlWrapper(ctrl.updateSubscription));
+router.patch('/users', authenticate, ctrlWrapper(ctrl.updateSubscription));
 router.patch('/users/avatars', authenticate, upload.single("avatar"), ctrlWrapper(ctrl.updateAvatar));
 
 module.exports = router;
