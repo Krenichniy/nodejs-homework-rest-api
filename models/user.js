@@ -52,10 +52,21 @@ const updateSubscriptionSchema = Joi.object({
     subscription: Joi.string().required(),
 })
 
+// const subscriptionSchema = Joi.object({
+//   subscription: Joi.string()
+//     .valid(...subscription)
+//     .required()
+//     .messages({
+//       "string.base": `"name" should be a type of 'string'`,
+//       "any.required": `"name" is a required field`,
+//     }),
+// })
+
 const schemas = {
     registerShema,
     loginShema,
-    updateSubscriptionSchema
+    updateSubscriptionSchema,
+    
 }
 const User = model("user", userSchema);
 
