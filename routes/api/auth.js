@@ -12,4 +12,5 @@ router.get('/logout', authenticate, ctrlWrapper(ctrl.logout));
 router.patch('/users', authenticate, ctrlWrapper(ctrl.updateSubscription));
 router.patch('/users/avatars', authenticate, upload.single("avatar"), ctrlWrapper(ctrl.updateAvatar));
 
+
 module.exports = router;
