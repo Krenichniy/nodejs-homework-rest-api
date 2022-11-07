@@ -26,6 +26,10 @@ const userSchema = new Schema({
     token: {
         type: String,
         default: ""
+    }, 
+    avatarURL: {
+        type: String,
+        required: true,
     }
 })
 
@@ -51,7 +55,7 @@ const updateSubscriptionSchema = Joi.object({
 const schemas = {
     registerShema,
     loginShema,
-    updateSubscriptionSchema
+    updateSubscriptionSchema,
 }
 const User = model("user", userSchema);
 
